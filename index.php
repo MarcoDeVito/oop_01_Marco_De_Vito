@@ -32,9 +32,9 @@ class Company
         return $averegeExpense;
     }
 
-    public function printAveregeExpense($avg)
+    public function printAveregeExpense($mounth)
     {
-        echo "il costo medio di $this->name è di $avg$\n";
+        echo "il costo medio in $mounth mesi di $this->name è di {$this->calculateExpense($mounth)}$\n";
     }
 
     public static function totalCompanies()
@@ -51,5 +51,5 @@ $company4 = new Company("Apple Inc.", "America", 137000, 10167);
 $company5 = new Company("Toyota Motor Corporation", "Giappone", 366000, 5417);
 $company1->printNumEmployees();
 $company3->printNumEmployees();
-$company1->printAveregeExpense($company1->calculateExpense(6));
-$company5->printAveregeExpense($company5->calculateExpense(6));
+$company1->printAveregeExpense(4);
+$company5->printAveregeExpense(4);
