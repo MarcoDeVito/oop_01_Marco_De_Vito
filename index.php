@@ -28,7 +28,7 @@ class Company
 
     public function calculateExpense($mounth)
     {
-        $averegeExpense = $mounth * $this->avg_salary;
+        $averegeExpense = $mounth * $this->avg_salary * $this->tot_employees;
         return $averegeExpense;
     }
 
@@ -46,10 +46,10 @@ class Company
 
 $company1 = new Company("Aulab", "Italia", 50, 1500);
 $company2 = new Company("Coca-cola", "America", 15000, 2000);
-$company3 = new Company("Siemens AG", "Berlino, Germania", 293000, 4833);
-$company4 = new Company("Apple Inc.", "California, USA", 137000, 10167);
-$company5 = new Company("Toyota Motor Corporation", "Aichi, Giappone", 366000, 5417);
-$company2->printNumEmployees();
+$company3 = new Company("Siemens AG", "Germania");
+$company4 = new Company("Apple Inc.", "America", 137000, 10167);
+$company5 = new Company("Toyota Motor Corporation", "Giappone", 366000, 5417);
+$company1->printNumEmployees();
 $company3->printNumEmployees();
-$company2->printAveregeExpense($company2->calculateExpense(6));
-$company3->printAveregeExpense($company3->calculateExpense(6));
+$company1->printAveregeExpense($company1->calculateExpense(6));
+$company5->printAveregeExpense($company5->calculateExpense(6));
